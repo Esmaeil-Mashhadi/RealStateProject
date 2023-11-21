@@ -24,7 +24,6 @@ export const authOptions = {
             throw new Error("Please Sign up first")
            }
 
-           console.log(user);
            const isValid = await verifyPassword(password , user.password)
            if(!isValid){
             throw new Error ("email or password is not right")
