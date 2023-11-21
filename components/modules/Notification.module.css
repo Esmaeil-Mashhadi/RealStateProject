@@ -1,0 +1,55 @@
+.Notification{
+    width: fit-content;
+    position: absolute;
+    transform: translateX(-500px);
+    right: 50px;
+    top: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    animation-name: come, go;
+    animation-duration: .8s, 1s;
+    animation-delay: 0s, 2s;
+    animation-fill-mode: forwards, forwards;
+}
+
+@keyframes come {
+    0% {
+      opacity: 0;
+      rotate: 90deg;
+    }
+    100% {
+      transform: translateX(0);
+      rotate: 0deg;
+    }
+  }
+  
+  @keyframes go {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+  }
+
+.failContainer{
+    background-color: rgba(255, 0, 0, 0.741);
+    padding: 10px;
+    box-shadow: 0px 0px 5px black;
+    font-size: bold;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+.successContainer{
+    font-size: bolder;
+    font-size: 15px;
+    background-color: rgb(12, 255, 28);
+    padding: 10px;
+    box-shadow: 0px 0px 5px black;
+  }
+  .successContainer span{
+    color: rgb(195, 0, 255);
+    font-weight: bolder;
+  }
