@@ -20,3 +20,19 @@ export async function DELETE(req , context){
  }
 }
 
+
+
+export async function PATCH(req, context){
+    try {
+        await connectDB()
+        const id = context.params.posterID
+        const result = await posterModel.updateOne({_id : id} , {$set :{published: true}})
+        if(result.modifiedCount){
+            return NextResponse.json({status:200 , message:"poster published successfully"})
+        }else{
+            return NextResponse.json({status:200} , {error:" failed to publish poster"})
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
