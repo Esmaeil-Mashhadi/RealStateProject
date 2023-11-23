@@ -32,7 +32,7 @@ const DashboardSidebar = async ({children , email , role , awaitNumber}) => {
             </div>
 
               <div className={styles.main}>
-                    {children}
+                    {children}  
             </div>
             
         </div>

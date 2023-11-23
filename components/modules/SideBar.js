@@ -27,8 +27,8 @@ const SideBar = () => {
 
             <div className={styles.categories}> 
             <Link  href="/buy-residential"><DiGhostSmall/>All </Link>
-            {queries.map(item=>(
-                <Link href={{pathname:"/buy-residential" , query:{category: Object.keys(item)}} }> 
+            {queries.map((item , index)=>(
+                <Link key={index} href={{pathname:"/buy-residential" , query:{category: Object.keys(item)}} }> 
                  {icons[Object.keys(item)]}{Object.values(item)}
                 </Link>
             ))}

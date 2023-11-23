@@ -4,7 +4,7 @@ const AdminPage = ({posters}) => {
     
     return (
         <div>
-            {posters.length ? null : <p>There is no add for confirming yet</p>}
+            {posters.length ? null : <p style={{margin:'55px'}}>There is no add for confirming yet !</p>}
             {posters.map(item =>  <AdminCard key={item._id} data= {item} />)}
         </div>
 

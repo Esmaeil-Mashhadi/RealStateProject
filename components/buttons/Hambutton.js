@@ -26,8 +26,8 @@ const Hambutton = ({queries, icons}) => {
         <div className={styles.container}>
          <span onClick={showHandler}>{hamShow ? <RxCross2/> : <RxHamburgerMenu/>}</span>   
       
-         <div style={move} className={styles.HamSideBar}>
-            {queries?.map(item => (<Link onClick={()=>setHamshow(false)}  href={{pathname:"buy-residential" , query:{category:Object.keys(item)}}}>
+         <div style={move} className={styles.HamSideBar}> 
+            {queries?.map((item , index) => (<Link key={index} onClick={()=>setHamshow(false)}  href={{pathname:"buy-residential" , query:{category:Object.keys(item)}}}>
                 <p className={styles.Link}>{icons[Object.keys(item)]} : { Object.values(item)}</p></Link>))}
 
         </div>

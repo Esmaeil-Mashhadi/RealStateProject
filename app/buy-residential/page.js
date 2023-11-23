@@ -1,7 +1,6 @@
 import BuyResidentialPage from "@/components/templates/BuyResidentialPage";
 
 const BuyResidential = async ({searchParams}) => {
-
             const res = await fetch('http://localhost:3000/api/poster', {cache:"no-store"})
             //just testing ssr 
             const result = await res.json()
